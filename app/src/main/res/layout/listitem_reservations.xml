@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:id="@+id/reservations_name_ctr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+
+
+
+        <TextView
+                android:id="@+id/reservations_firstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/cmn_lightblue"
+                android:textSize="14sp"
+                tools:text="Irina" />
+
+        <TextView
+                android:id="@+id/reservations_lastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/cmn_lightblue"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/reservations_firstName"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Kosmetolog" />
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+            android:id="@+id/reservations_date_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reservations_name_ctr"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            >
+
+        <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/reservations_divider"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/cmn_black"
+                android:textSize="14sp"
+
+                tools:text="2019 October 10" />
+
+    </LinearLayout>
+
+    <View
+            android:id="@+id/reservations_divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/cmn_black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reservations_date_container" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
