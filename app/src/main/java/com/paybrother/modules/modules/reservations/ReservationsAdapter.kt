@@ -1,18 +1,20 @@
-package com.paybrother
+package com.paybrother.modules.modules.reservations
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.paybrother.R
 
-class ReservationsAdapter(var items: List<ReservationItem>, val callback: ReservationsAdapter.Callback) : RecyclerView.Adapter<ReservationsAdapter.ReservationsViewHolder>() {
+class ReservationsAdapter(var items: List<ReservationItem>, val callback: Callback) : RecyclerView.Adapter<ReservationsAdapter.ReservationsViewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ReservationsViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.listitem_reservations, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ReservationsViewHolder(LayoutInflater.from(parent.context).inflate(
+        R.layout.listitem_reservations, parent, false))
 
     override fun getItemCount() = items.size
 
-    override fun onBindViewHolder(holder: ReservationsAdapter.ReservationsViewHolder, position: Int){
+    override fun onBindViewHolder(holder: ReservationsViewHolder, position: Int){
         holder.bind(items[position])
     }
 
